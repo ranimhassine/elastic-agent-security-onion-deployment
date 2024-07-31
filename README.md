@@ -68,8 +68,8 @@ After running the playbook:
 Check the Elastic Fleet server to confirm new agents are connected.
 Verify data flow in Security Onion's Kibana interface.
 
+## 🔧 Customization
 
-🔧 Customization
 Modifying the Playbook
 
 Open the Os_based_deployment.yaml file in your preferred text editor.
