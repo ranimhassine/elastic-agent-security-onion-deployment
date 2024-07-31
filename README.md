@@ -2,7 +2,7 @@
 
 ![Security Onion Logo][logo]
 
-[logo]: https://www.google.com/url?sa=i&url=https%3A%2F%2Ficonduck.com%2Ficons%2F253009%2Fsecurity-onion&psig=AOvVaw0EPmAHRv0he8q_Zc_ORZRW&ust=1722543287719000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCOCU3vmL0ocDFQAAAAAdAAAAABAE "Security Onion Logo"
+[logo]:https://github.com/ranimhassine/elastic-agent-security-onion-deployment/issues/1#issue-2440874129 "Security Onion Logo"
 
 This repository contains Ansible playbooks for deploying Elastic Agents in Elastic Fleet, tailored specifically for Security Onion environments. Our playbooks streamline the installation, configuration, and management of Elastic Agents across multiple endpoints, ensuring seamless integration with Security Onion's threat hunting and network security monitoring capabilities.
 
