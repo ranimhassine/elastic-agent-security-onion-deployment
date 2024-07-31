@@ -97,8 +97,8 @@ yamlCopy- name: Install Elastic Agent on Windows
 
 Adjust the commands and conditions as needed for your environment.
 
-##🆘 Troubleshooting
-###SSH Connection Failures
+## 🆘 Troubleshooting
+### SSH Connection Failures
 
 Verify SSH key configuration:
 ┌─────────────────────────────────────────────┐
