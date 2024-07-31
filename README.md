@@ -19,8 +19,6 @@ This repository contains Ansible playbooks for deploying Elastic Agents in Elast
 - [Detailed Usage](#detailed-usage)
 - [Customization](#customization)
 - [Troubleshooting](#troubleshooting)
-- [Contributing](#contributing)
-- [License](#license)
 
 ---
 
@@ -122,34 +120,4 @@ Confirm Fleet server URL is correct
 Check enrollment tokens
 Verify outbound connectivity from agents to Fleet server
 
-</details>
 
-🤝 Contributing
-We welcome contributions! Please follow these steps:
-
-Fork the repository
-Create a new branch:
-┌─────────────────────────────────────────┐
-│ git checkout -b feature-branch-name     │ 
-└─────────────────────────────────────────┘
-
-Make your changes and commit them:
-┌─────────────────────────────────────────┐
-│ git commit -m 'Add some feature'        │
-└─────────────────────────────────────────┘
-
-Push to the branch:
-┌─────────────────────────────────────────┐
-│ git push origin feature-branch-name     │
-└─────────────────────────────────────────┘
-
-Submit a pull request
-
-
-📄 License
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-<p align="center">
-  Made with ❤️ by Your Team Name
-</p>
-```
