@@ -15,7 +15,6 @@ This repository contains Ansible playbooks for deploying Elastic Agents in Elast
 
 - [Prerequisites](#prerequisites)
 - [Repository Structure](#repository-structure)
-- [Quick Start](#quick-start)
 - [Detailed Usage](#detailed-usage)
 - [Customization](#customization)
 - [Troubleshooting](#troubleshooting)
@@ -38,16 +37,6 @@ Before you begin, ensure you have:
 - `Os_based_deployment.yaml`: Main Ansible playbook for deploying Elastic Agents
 - `inventory.ini`: Inventory file listing target hosts
 
----
-
-## 🚀 Quick Start
-###
-1.Update the `inventory.ini` file with your target hosts.
-2. Run the playbook:
-┌───────────────────────────────────────────────────────────┐
-│ ansible-playbook -i inventory.ini Os_based_deployment.yaml│ 
-└───────────────────────────────────────────────────────────┘
----
 
 ## 📘 Detailed Usage
 
@@ -58,7 +47,7 @@ Before you begin, ensure you have:
 2. Verify SSH access to all target hosts.
 
 3. Update the `inventory.ini` file:
-```ini
+```
 [windows]
 win_host1 ansible_host=192.168.1.101
 win_host2 ansible_host=192.168.1.102
