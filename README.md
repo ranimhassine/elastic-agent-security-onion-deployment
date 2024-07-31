@@ -69,7 +69,7 @@ Check the Elastic Fleet server to confirm new agents are connected.
 Verify data flow in Security Onion's Kibana interface.
 
 
-🔧 Customization
+##🔧 Customization
 To customize the deployment for your environment:
 
 Edit Os_based_deployment.yaml to modify:
@@ -82,7 +82,7 @@ Integration options
 Adjust variables for different OS types or host groups.
 
 
-🆘 Troubleshooting
+##🆘 Troubleshooting
 Common issues and solutions:
 <details>
 <summary>SSH Connection Failures</summary>
