@@ -46,10 +46,10 @@ Before you begin, ensure you have:
 
 1. Clone this repository:
 ┌────────────────────────────────────────────────────────────────────────────┐
-│ git clone https://github.com/yourusername/elastic-agent-security-onion.git                   
+ git clone https://github.com/yourusername/elastic-agent-security-onion.git                   
 └────────────────────────────────────────────────────────────────────────────┘
 ┌────────────────────────────────────────────────────────────────────────────┐
-│ cd elastic-agent-security-onion                                        
+ cd elastic-agent-security-onion                                        
 └────────────────────────────────────────────────────────────────────────────┘
 
 3. Update the `inventory.ini` file with your target hosts.
