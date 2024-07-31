@@ -35,10 +35,7 @@ Before you begin, ensure you have:
 ---
 
 ## 📁 Repository Structure
-.
-├── Os_based_deployment.yaml
-├── inventory.ini
-└── README.md
+
 
 - `Os_based_deployment.yaml`: Main Ansible playbook for deploying Elastic Agents
 - `inventory.ini`: Inventory file listing target hosts
