@@ -13,7 +13,7 @@ This repository contains Ansible playbooks for deploying Elastic Agents in Elast
 
 ## 📋 Table of Contents
 
-- [Prerequisites](#prerequisites)
+- [[Prerequisites](https://github.com/ranimhassine/elastic-agent-security-onion-deployment/blob/main/README.md#-prerequisites)](#prerequisites)
 - [Repository Structure](#repository-structure)
 - [Detailed Usage](#detailed-usage)
 - [Customization](#customization)
