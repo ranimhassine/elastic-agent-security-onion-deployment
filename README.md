@@ -102,13 +102,13 @@ Adjust the commands and conditions as needed for your environment.
 
 Verify SSH key configuration:  
 ┌─────────────────────────────────────────────┐  
-│ ssh-copy-id user@target_host                │  
+│ ssh-copy-id user@target_host                 
 └─────────────────────────────────────────────┘  
 
 Check firewall settings on target hosts.  
 Test network connectivity:  
 ┌─────────────────────────────────────────────┐  
-│ ping target_host                            │  
+│ ping target_host                            
 └─────────────────────────────────────────────┘  
 
 
@@ -118,5 +118,5 @@ Confirm Fleet server URL in the playbook.
 Check enrollment tokens in your Fleet server.  
 Verify outbound connectivity:  
 ┌─────────────────────────────────────────────┐  
-│ curl -v https://your-fleet-server:8220      │  
+│ curl -v https://your-fleet-server:8220       
 └─────────────────────────────────────────────┘  
