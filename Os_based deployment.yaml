@@ -1,4 +1,4 @@
-Os_based deployment
+Os_based_deployment
 
 - name: Deploy Elastic Agent
   hosts: all
