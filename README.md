@@ -69,34 +69,97 @@ Check the Elastic Fleet server to confirm new agents are connected.
 Verify data flow in Security Onion's Kibana interface.
 
 
-## 🔧 Customization
-To customize the deployment for your environment:
+🔧 Customization
+Modifying the Playbook
 
-Edit Os_based_deployment.yaml to modify:
+Open the Os_based_deployment.yaml file in your preferred text editor.
+Locate the following sections to customize:
+yamlCopyvars:
+  agent_version: "8.2.0"
+  fleet_url: "https://your-fleet-server:8220"
+  # Add more variables as needed
 
-Agent versions
-Configuration settings
-Integration options
+Adjust the variables according to your requirements:
+
+Update agent_version to your desired Elastic Agent version
+Modify fleet_url to match your Fleet server address
 
 
-Adjust variables for different OS types or host groups.
+
+Customizing for Different OS Types
+
+In the Os_based_deployment.yaml file, find the OS-specific tasks:
+yamlCopy- name: Install Elastic Agent on Windows
+  win_shell: # Windows-specific commands
+  when: ansible_os_family == "Windows"
+
+- name: Install Elastic Agent on Linux
+  shell: # Linux-specific commands
+  when: ansible_os_family == "Linux"
+
+Adjust the commands and conditions as needed for your environment.
+
+Adding New Integration Options
+
+To add a new integration, append to the integrations list in the playbook:
+yamlCopyvars:
+  integrations:
+    - name: "system"
+    - name: "auditd"
+    # Add your new integration here
+    - name: "your_new_integration"
+
+Ensure the corresponding integration is available in your Fleet server.
+
+🆘 Troubleshooting
+Common Issues and Solutions
+SSH Connection Failures
+
+Verify SSH key configuration:
+┌─────────────────────────────────────────────┐
+│ ssh-copy-id user@target_host                │
+└─────────────────────────────────────────────┘
+
+Check firewall settings on target hosts:
+
+For Linux:
+┌─────────────────────────────────────────────┐
+│ sudo iptables -L                            │
+└─────────────────────────────────────────────┘
+
+For Windows, check Windows Firewall settings in the Control Panel
 
 
-## 🆘 Troubleshooting
-Common issues and solutions:
-<details>
-<summary>SSH Connection Failures</summary>
+Test network connectivity:
+┌─────────────────────────────────────────────┐
+│ ping target_host                            │
+└─────────────────────────────────────────────┘
 
-Ensure SSH keys are properly set up
-Check firewall settings on target hosts
-Verify network connectivity
 
-</details>
-<details>
-<summary>Agent Registration Errors</summary>
+Agent Registration Errors
 
-Confirm Fleet server URL is correct
-Check enrollment tokens
-Verify outbound connectivity from agents to Fleet server
+Confirm Fleet server URL:
 
+Open Os_based_deployment.yaml
+Verify the fleet_url variable is correct
+
+
+Check enrollment tokens:
+
+Log into your Fleet server
+Navigate to Fleet > Enrollment Tokens
+Ensure the token in your playbook matches an active token
+
+
+Verify outbound connectivity:
+┌─────────────────────────────────────────────┐
+│ curl -v https://your-fleet-server:8220      │
+└─────────────────────────────────────────────┘
+
+
+Debugging the Playbook
+To get more information during playbook execution, use the -vvv flag:
+┌──────────────────────────────────────────────────────────────────┐
+│ ansible-playbook -i inventory.ini Os_based_deployment.yaml -vvv  │
+└──────────────────────────────────────────────────────────────────┘
 
