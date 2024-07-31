@@ -2,7 +2,7 @@
 
 ![Security Onion Logo][logo]
 
-[logo]: https://your-logo-url.com](https://private-user-images.githubusercontent.com/127058080/353984634-bea2f232-053c-429e-8910-89ba34560917.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MjI0NTc0OTMsIm5iZiI6MTcyMjQ1NzE5MywicGF0aCI6Ii8xMjcwNTgwODAvMzUzOTg0NjM0LWJlYTJmMjMyLTA1M2MtNDI5ZS04OTEwLTg5YmEzNDU2MDkxNy5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjQwNzMxJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MDczMVQyMDE5NTNaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT04YmQ2ZTBmYjZlM2ZkZTEwNWU2YzliODA0YzU1ZGQ5MmU3NWQ1NjExYWI0MTIzMWNmOWI4ZTM3YjI4ZjYwODZiJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZhY3Rvcl9pZD0wJmtleV9pZD0wJnJlcG9faWQ9MCJ9.gPNg6o_zpgEDYTb9D5svVT8DlZC36Simhfyk6YkX_i8) "Security Onion Logo"
+[logo]:https://private-user-images.githubusercontent.com/127058080/353984634-bea2f232-053c-429e-8910-89ba34560917.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MjI0NTc4NTQsIm5iZiI6MTcyMjQ1NzU1NCwicGF0aCI6Ii8xMjcwNTgwODAvMzUzOTg0NjM0LWJlYTJmMjMyLTA1M2MtNDI5ZS04OTEwLTg5YmEzNDU2MDkxNy5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjQwNzMxJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MDczMVQyMDI1NTRaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT0zMjYwYWFiYmE2OWViYzZhNmU5NjU2OTI4YzA0NmYxYWQ4YTQxYzNkYTA2ZDUwMzgzMjk3NTU4YmE2NWI1ODA5JlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZhY3Rvcl9pZD0wJmtleV9pZD0wJnJlcG9faWQ9MCJ9._-oggnecmhBv0FWWjSxyXVFPaVsDtKrQrC8t2-E8KoU "Security Onion Logo"
 
 This repository contains Ansible playbooks for deploying Elastic Agents in Elastic Fleet, tailored specifically for Security Onion environments. Our playbooks streamline the installation, configuration, and management of Elastic Agents across multiple endpoints, ensuring seamless integration with Security Onion's threat hunting and network security monitoring capabilities.
 
@@ -39,7 +39,7 @@ Before you begin, ensure you have:
 ├── Os_based_deployment.yaml
 ├── inventory.ini
 └── README.md
-Copy
+
 - `Os_based_deployment.yaml`: Main Ansible playbook for deploying Elastic Agents
 - `inventory.ini`: Inventory file listing target hosts
 
@@ -48,18 +48,18 @@ Copy
 ## 🚀 Quick Start
 
 1. Clone this repository:
-┌────────────────────────────────────────────────────────────────────────┐
-│ git clone https://github.com/yourusername/elastic-agent-security-onion.git │
-│ cd elastic-agent-security-onion                                        │
-└────────────────────────────────────────────────────────────────────────┘
-Copy
+┌────────────────────────────────────────────────────────────────────────────┐
+│ git clone https://github.com/yourusername/elastic-agent-security-onion.git 
+│ cd elastic-agent-security-onion                                        
+└────────────────────────────────────────────────────────────────────────────┘
+
 2. Update the `inventory.ini` file with your target hosts.
 
 3. Run the playbook:
-┌──────────────────────────────────────────────────────────┐
+┌────────────────────────────────────────────────────────────┐
 │ ansible-playbook -i inventory.ini Os_based_deployment.yaml │
-└──────────────────────────────────────────────────────────┘
-Copy
+└────────────────────────────────────────────────────────────┘
+
 ---
 
 ## 📘 Detailed Usage
@@ -81,9 +81,9 @@ linux_host1 ansible_host=192.168.1.201
 linux_host2 ansible_host=192.168.1.202
 Running the Playbook
 Execute the playbook with the following command:
-Copy┌──────────────────────────────────────────────────────────┐
-│ ansible-playbook -i inventory.ini Os_based_deployment.yaml │
-└──────────────────────────────────────────────────────────┘
+┌───────────────────────────────────────────────────────────┐
+│ ansible-playbook -i inventory.ini Os_based_deployment.yaml│ 
+└───────────────────────────────────────────────────────────┘
 This will start the deployment process across all specified hosts.
 Show Image
 Verifying Deployment
@@ -130,18 +130,18 @@ We welcome contributions! Please follow these steps:
 
 Fork the repository
 Create a new branch:
-Copy┌─────────────────────────────────────────┐
-│ git checkout -b feature-branch-name      │
+┌─────────────────────────────────────────┐
+│ git checkout -b feature-branch-name     │ 
 └─────────────────────────────────────────┘
 
 Make your changes and commit them:
-Copy┌─────────────────────────────────────────┐
-│ git commit -m 'Add some feature'         │
+┌─────────────────────────────────────────┐
+│ git commit -m 'Add some feature'        │
 └─────────────────────────────────────────┘
 
 Push to the branch:
-Copy┌─────────────────────────────────────────┐
-│ git push origin feature-branch-name      │
+┌─────────────────────────────────────────┐
+│ git push origin feature-branch-name     │
 └─────────────────────────────────────────┘
 
 Submit a pull request
