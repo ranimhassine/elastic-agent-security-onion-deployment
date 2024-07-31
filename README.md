@@ -45,6 +45,7 @@ Before you begin, ensure you have:
 1.Update the `inventory.ini` file with your target hosts.
 
 2. Run the playbook:
+   
 ┌────────────────────────────────────────────────────────────┐
 │ ansible-playbook -i inventory.ini Os_based_deployment.yaml │
 └────────────────────────────────────────────────────────────┘
