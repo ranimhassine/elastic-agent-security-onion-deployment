@@ -110,10 +110,10 @@ yamlCopyvars:
     - name: "your_new_integration"
 
 Ensure the corresponding integration is available in your Fleet server.
----
+
 🆘 Troubleshooting
-Common Issues and Solutions
 SSH Connection Failures
+
 
 Verify SSH key configuration:
 ┌─────────────────────────────────────────────┐
