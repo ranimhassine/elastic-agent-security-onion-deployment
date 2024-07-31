@@ -4,15 +4,15 @@ Os_based_deployment
   hosts: all
   gather_facts: yes
   vars:
-    fleet_server_url: "https://192.168.1.11:8220"
+    fleet_server_url: "https://your security onion:8220"
     enrollment_token: "{{ lookup('env', 'ELASTIC_AGENT_ENROLLMENT_TOKEN') }}"
     elastic_agent_version: "8.10.4"
     windows_install_dir: "C:\\Program Files\\Agent"
     kali_download_dir: "/home/kali/Downloads"
     ansible_winrm_operation_timeout_sec: 60
     ansible_winrm_read_timeout_sec: 70
-    general_token: "SWxGMnBwQUI1UUFmSEt6N1d2VUk6MlNxNmRTMTFSLUdXdzBhZGU3QmQyQQ=="
-    heavy_token: "SkZGMnBwQUI1UUFmSEt6N1pmWHc6ZmJvUFBsOWZTRy1uZ3E4di1ERWZKZw=="
+    general_token: "your token"
+    heavy_token: "your token"
   tasks:
     - name: Set OS-specific variables
       set_fact:
