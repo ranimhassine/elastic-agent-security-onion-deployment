@@ -37,7 +37,6 @@ Before you begin, ensure you have:
 - `Os_based_deployment.yaml`: Main Ansible playbook for deploying Elastic Agents
 - `inventory.ini`: Inventory file listing target hosts
 
----
 ## 📘 Detailed Usage
 
 ### Preparing Your Environment
@@ -47,30 +46,29 @@ Before you begin, ensure you have:
 2. Verify SSH access to all target hosts.
 
 3. Update the `inventory.ini` file:
-```
-[windows]
-win_host1 ansible_host=192.168.1.101
-win_host2 ansible_host=192.168.1.102
+   ```ini
+   [windows]
+   win_host1 ansible_host=192.168.1.101
+   win_host2 ansible_host=192.168.1.102
 
-[linux]
-linux_host1 ansible_host=192.168.1.201
-linux_host2 ansible_host=192.168.1.202
+   [linux]
+   linux_host1 ansible_host=192.168.1.201
+   linux_host2 ansible_host=192.168.1.202
 Running the Playbook
 Execute the playbook with the following command:
-┌───────────────────────────────────────────────────────────┐
-│ ansible-playbook -i inventory.ini Os_based_deployment.yaml│ 
-└───────────────────────────────────────────────────────────┘
+┌────────────────────────────────────────────────────────────┐
+│ ansible-playbook -i inventory.ini Os_based_deployment.yaml │
+└────────────────────────────────────────────────────────────┘
 This will start the deployment process across all specified hosts.
-Show Image
+![Deployment Process][deployment]
 Verifying Deployment
 After running the playbook:
 
 Check the Elastic Fleet server to confirm new agents are connected.
 Verify data flow in Security Onion's Kibana interface.
----
-## 🔧 Customization
 
-Modifying the Playbook
+## 🔧 Customization
+### Modifying the Playbook
 
 Open the Os_based_deployment.yaml file in your preferred text editor.
 Locate the following sections to customize:
@@ -99,37 +97,15 @@ yamlCopy- name: Install Elastic Agent on Windows
 
 Adjust the commands and conditions as needed for your environment.
 
-Adding New Integration Options
-
-To add a new integration, append to the integrations list in the playbook:
-yamlCopyvars:
-  integrations:
-    - name: "system"
-    - name: "auditd"
-    # Add your new integration here
-    - name: "your_new_integration"
-
-Ensure the corresponding integration is available in your Fleet server.
-
 🆘 Troubleshooting
 SSH Connection Failures
-
 
 Verify SSH key configuration:
 ┌─────────────────────────────────────────────┐
 │ ssh-copy-id user@target_host                │
 └─────────────────────────────────────────────┘
 
-Check firewall settings on target hosts:
-
-For Linux:
-┌─────────────────────────────────────────────┐
-│ sudo iptables -L                            │
-└─────────────────────────────────────────────┘
-
-For Windows, check Windows Firewall settings in the Control Panel
-
-
+Check firewall settings on target hosts.
 Test network connectivity:
 ┌─────────────────────────────────────────────┐
 │ ping target_host                            │
@@ -138,28 +114,9 @@ Test network connectivity:
 
 Agent Registration Errors
 
-Confirm Fleet server URL:
-
-Open Os_based_deployment.yaml
-Verify the fleet_url variable is correct
-
-
-Check enrollment tokens:
-
-Log into your Fleet server
-Navigate to Fleet > Enrollment Tokens
-Ensure the token in your playbook matches an active token
-
-
+Confirm Fleet server URL in the playbook.
+Check enrollment tokens in your Fleet server.
 Verify outbound connectivity:
 ┌─────────────────────────────────────────────┐
 │ curl -v https://your-fleet-server:8220      │
 └─────────────────────────────────────────────┘
-
-
-Debugging the Playbook
-To get more information during playbook execution, use the -vvv flag:
-┌──────────────────────────────────────────────────────────────────┐
-│ ansible-playbook -i inventory.ini Os_based_deployment.yaml -vvv  │
-└──────────────────────────────────────────────────────────────────┘
----
