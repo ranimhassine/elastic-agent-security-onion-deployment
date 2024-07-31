@@ -37,7 +37,7 @@ Before you begin, ensure you have:
 - `Os_based_deployment.yaml`: Main Ansible playbook for deploying Elastic Agents
 - `inventory.ini`: Inventory file listing target hosts
 
-
+---
 ## 📘 Detailed Usage
 
 ### Preparing Your Environment
@@ -67,7 +67,7 @@ After running the playbook:
 
 Check the Elastic Fleet server to confirm new agents are connected.
 Verify data flow in Security Onion's Kibana interface.
-
+---
 ## 🔧 Customization
 
 Modifying the Playbook
@@ -110,7 +110,7 @@ yamlCopyvars:
     - name: "your_new_integration"
 
 Ensure the corresponding integration is available in your Fleet server.
-
+---
 🆘 Troubleshooting
 Common Issues and Solutions
 SSH Connection Failures
@@ -162,4 +162,4 @@ To get more information during playbook execution, use the -vvv flag:
 ┌──────────────────────────────────────────────────────────────────┐
 │ ansible-playbook -i inventory.ini Os_based_deployment.yaml -vvv  │
 └──────────────────────────────────────────────────────────────────┘
-
+---
