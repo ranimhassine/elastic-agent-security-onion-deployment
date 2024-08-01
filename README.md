@@ -55,10 +55,10 @@ Before you begin, ensure you have:
    linux_host1 ansible_host=192.168.1.201
    linux_host2 ansible_host=192.168.1.202
 Running the Playbook
-Execute the playbook with the following command:
-┌────────────────────────────────────────────────────────────┐
-│ ansible-playbook -i inventory.ini Os_based_deployment.yaml │
-└────────────────────────────────────────────────────────────┘
+Execute the playbook with the following command:  
+┌────────────────────────────────────────────────────────────┐  
+│ ansible-playbook -i inventory.ini Os_based_deployment.yaml │  
+└────────────────────────────────────────────────────────────┘  
 This will start the deployment process across all specified hosts.
 ![Deployment Process][deployment]
 Verifying Deployment
