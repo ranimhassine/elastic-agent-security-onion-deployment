@@ -60,8 +60,6 @@ Execute the playbook with the following command:
 │ ansible-playbook -i inventory.ini Os_based_deployment.yaml │  
 └────────────────────────────────────────────────────────────┘  
 This will start the deployment process across all specified hosts.
-Verifying Deployment
-After running the playbook:
 
 Check the Elastic Fleet server to confirm new agents are connected.
 Verify data flow in Security Onion's Kibana interface.
