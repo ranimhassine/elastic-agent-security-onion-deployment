@@ -60,7 +60,6 @@ Execute the playbook with the following command:
 │ ansible-playbook -i inventory.ini Os_based_deployment.yaml │  
 └────────────────────────────────────────────────────────────┘  
 This will start the deployment process across all specified hosts.
-![Deployment Process][deployment]
 Verifying Deployment
 After running the playbook:
 
