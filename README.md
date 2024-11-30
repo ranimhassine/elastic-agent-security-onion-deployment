@@ -1,4 +1,4 @@
-# 🛡️ Elastic Agent Deployment for Security Onion
+# 🛡️ Elastic Agent Deployment for Security Onion 
 
 ![Security Onion Logo][logo]
 
